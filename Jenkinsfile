@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Compilar') {
             steps {
-                sh 'mvn clean package -DskipTests'
+                bat 'mvn clean package -DskipTests'
             }
         }
 
         stage('Pruebas') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
